@@ -35,9 +35,11 @@ export const Hero = () => {
           </Paragraph>
           <div className="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
             <div className="flex sm:flex-row flex-col gap-5 w-full">
+              <a href="#Domain">
               <Button className="min-w-max text-white">
                 <span className="relative z-[5]">Learn More</span>
               </Button>
+              </a>
             </div>
           </div>
         </div>

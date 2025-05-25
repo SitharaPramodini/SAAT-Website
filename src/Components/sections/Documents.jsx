@@ -7,63 +7,68 @@ const Documents = () => {
             title: "Topic Assessment",
             icon: CheckSquare,
             color: "blue",
-            date: "Feb 15, 2024",
-            status: "Individual",
-            driveLink: "#"
-        },
-        {
-            title: "Project Charter",
-            icon: Award,
-            color: "purple",
-            date: "Mar 10, 2024",
+            date: "June, 2024",
             status: "Group",
-            driveLink: "#"
+            driveLink: "#",
+            id:"18kgnR2wd_aawnQYGHVJhIu-Qthvy2ntb"
         },
         {
             title: "Project Proposal",
             icon: Presentation,
             color: "green",
-            date: "August 2024",
+            date: "July 2024",
             status: "Individual",
-            driveLink: "#"
+            driveLink: "#",
+            id: "1qO-LH8-vBOmjZ3Z1i7M3ckVL8uuHjhNl"
         },
-        {
-            title: "Status Documents I",
-            icon: FileText,
-            color: "orange",
-            date: "Jun 18, 2024",
-            status: "Group",
-            driveLink: "#"
-        },
-        {
-            title: "Status Documents II",
-            icon: FileText,
-            color: "cyan",
-            date: "Aug 25, 2024",
-            status: "Group",
-            driveLink: "#"
-        },
+        // {
+        //     title: "Status Documents I",
+        //     icon: FileText,
+        //     color: "orange",
+        //     date: "Jun 18, 2024",
+        //     status: "Group",
+        //     driveLink: "#"
+        // },
+        // {
+        //     title: "Status Documents II",
+        //     icon: FileText,
+        //     color: "cyan",
+        //     date: "Aug 25, 2024",
+        //     status: "Group",
+        //     driveLink: "#"
+        // },
         {
             title: "Research Paper",
             icon: BookOpen,
             color: "indigo",
-            date: "Sep 30, 2024",
-            status: "Individual",
-            driveLink: "#"
+            date: "March, 2025",
+            status: "Group",
+            driveLink: "#",
+            id:"1CDyRqTzBP5ghJ6TowvfCFTjQg-Z_PuC_"
+        },
+        {
+            title: "UI/UX Demo",
+            icon: Award,
+            color: "purple",
+            date: "March, 2025",
+            status: "Group",
+            driveLink: "#",
+            id:"1lPkDoFozSmdlDJhnezSHIHu3LMTULmDI"
         },
         {
             title: "Final Report",
             icon: Trophy,
             color: "red",
-            date: "Nov 12, 2024",
+            date: "April, 2025",
             status: "Group",
-            driveLink: "#"
+            driveLink: "#",
+            id:"13ywHWnlPrJ4yx9SdnjNFC1Ykz4Et2Ip4"
         },
         {
             title: "Poster",
             icon: Image,
             color: "pink",
-            date: "Nov 15, 2024",
+            date: "",
             status: "Group",
             driveLink: "#"
         }
@@ -102,7 +107,7 @@ const Documents = () => {
             <div className="max-w-7xl mx-auto p-6">
 
                 {/* 8 Document Cards */}
-                <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 px-24">
                     {documents.map((doc, index) => {
                         const Icon = doc.icon;
                         const colors = getColorClasses(doc.color);
@@ -137,8 +142,8 @@ const Documents = () => {
                                         {/* Status Badge */}
                                         <div className="mb-6">
                                             <span className={`inline-block px-4 py-1 rounded-full text-sm font-bold ${doc.status === 'Individual'
-                                                    ? 'bg-blue-100 text-blue-700 border border-blue-300'
-                                                    : 'bg-green-100 text-green-700 border border-green-300'
+                                                ? 'bg-blue-100 text-blue-700 border border-blue-300'
+                                                : 'bg-green-100 text-green-700 border border-green-300'
                                                 }`}>
                                                 {doc.status === 'Individual' ? '👤 Individual' : '👥 Group'}
                                             </span>
@@ -146,13 +151,14 @@ const Documents = () => {
                                     </div>
 
                                     {/* Download Button */}
-                                    <button
-                                        onClick={() => handleDownload(doc.driveLink)}
+                                    <a
+                                        href={`https://drive.google.com/uc?export=download&id=${doc.id}`}
+                                        download
                                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 px-4 rounded-xl font-medium transition-all duration-200 flex items-center justify-center gap-2 group-hover:bg-blue-100 group-hover:text-blue-700"
                                     >
                                         <Download size={18} />
                                         Download
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         );

@@ -8,21 +8,24 @@ const Presentations = () => {
             color: "blue",
             date: "August 2024",
             status: "Group",
-            driveLink: "#"
+            driveLink: "#",
+            id:"14JHKNLeB4y7O-1DDvA22xcYMofy13tS1"
         },
         {
             title: "Progress Presentation I",
             color: "purple",
             date: "Mar 10, 2024",
             status: "Group",
-            driveLink: "#"
+            driveLink: "#",
+            id:"1Flsh3M2rkOqAD3Ij4XXdERdGBmOaP7Sv"
         },
         {
             title: "Progress Presentation II",
             color: "green",
             date: "Apr 22, 2024",
             status: "Group",
-            driveLink: "#"
+            driveLink: "#",
+            id:"1TcnOqY3dQyTAFNrZ6lum2Cizi-dftkls"
         },
         {
             title: "Final Presentation",
@@ -63,67 +66,69 @@ const Presentations = () => {
                 </div>
                 <p className="text-lg text-gray-600">Access all project presentations</p>
             </div>
-        <div className="max-w-7xl mx-auto p-6">
+            <div className="max-w-7xl mx-auto p-6">
 
-            {/* 8 Document Cards */}
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
-                {presentation.map((doc, index) => {
-                    const Icon = doc.icon;
-                    const colors = getColorClasses(doc.color);
-                    
-                    return (
-                        <div 
-                            key={index}
-                            className={`group bg-white rounded-2xl shadow-lg border-2 ${colors.border} ${colors.hover} transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl overflow-hidden`}
-                        >
-                            {/* Card Header */}
-                            <div className={`bg-gradient-to-r ${colors.gradient} p-6 text-white relative overflow-hidden`}>
-                                <div className="absolute inset-0 opacity-10">
-                                    <div className="absolute -top-4 -right-4 w-20 h-20 border-4 border-white rounded-full"></div>
-                                </div>
-                                
-                                <div className="relative z-10 text-center">
-                                    {/* <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                {/* 8 Document Cards */}
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+                    {presentation.map((doc, index) => {
+                        const Icon = doc.icon;
+                        const colors = getColorClasses(doc.color);
+
+                        return (
+                            <div
+                                key={index}
+                                className={`group bg-white rounded-2xl shadow-lg border-2 ${colors.border} ${colors.hover} transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl overflow-hidden`}
+                            >
+                                {/* Card Header */}
+                                <div className={`bg-gradient-to-r ${colors.gradient} p-6 text-white relative overflow-hidden`}>
+                                    <div className="absolute inset-0 opacity-10">
+                                        <div className="absolute -top-4 -right-4 w-20 h-20 border-4 border-white rounded-full"></div>
+                                    </div>
+
+                                    <div className="relative z-10 text-center">
+                                        {/* <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                                         <Icon size={32} className="text-white" />
                                     </div> */}
-                                    <h3 className="text-xl font-bold">{doc.title}</h3>
-                                </div>
-                            </div>
-
-                            {/* Card Body */}
-                            <div className="p-6 text-center">
-                                <div className='flex items-center justify-between'>
-                                {/* Date */}
-                                <div className="mb-4">
-                                    <p className="text-gray-600 text-sm font-medium">{doc.date}</p>
-                                </div>
-                                
-                                {/* Status Badge */}
-                                <div className="mb-6">
-                                    <span className={`inline-block px-4 py-1 rounded-full text-sm font-bold ${
-                                        doc.status === 'Individual' 
-                                            ? 'bg-blue-100 text-blue-700 border border-blue-300' 
-                                            : 'bg-green-100 text-green-700 border border-green-300'
-                                    }`}>
-                                        {doc.status === 'Individual' ? '👤 Individual' : '👥 Group'}
-                                    </span>
-                                </div>
+                                        <h3 className="text-xl font-bold">{doc.title}</h3>
+                                    </div>
                                 </div>
 
-                                {/* Download Button */}
-                                <button 
-                                    onClick={() => handleDownload(doc.driveLink)}
-                                    className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 px-4 rounded-xl font-medium transition-all duration-200 flex items-center justify-center gap-2 group-hover:bg-blue-100 group-hover:text-blue-700"
-                                >
-                                    <Download size={18} />
-                                    Download
-                                </button>
+                                {/* Card Body */}
+                                <div className="p-6 text-center">
+                                    <div className='flex items-center justify-between'>
+                                        {/* Date */}
+                                        <div className="mb-4">
+                                            <p className="text-gray-600 text-sm font-medium">{doc.date}</p>
+                                        </div>
+
+                                        {/* Status Badge */}
+                                        <div className="mb-6">
+                                            <span className={`inline-block px-4 py-1 rounded-full text-sm font-bold ${doc.status === 'Individual'
+                                                ? 'bg-blue-100 text-blue-700 border border-blue-300'
+                                                : 'bg-green-100 text-green-700 border border-green-300'
+                                                }`}>
+                                                {doc.status === 'Individual' ? '👤 Individual' : '👥 Group'}
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    {/* Download Button */}
+                                    <a
+                                        href={`https://drive.google.com/uc?export=download&id=${doc.id}`}
+                                        download
+                                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 px-4 rounded-xl font-medium transition-all duration-200 flex items-center justify-center gap-2 group-hover:bg-blue-100 group-hover:text-blue-700"
+                                    >
+                                        <Download size={18} />
+                                        Download
+                                    </a>
+
+
+                                </div>
                             </div>
-                        </div>
-                    );
-                })}
+                        );
+                    })}
+                </div>
             </div>
-        </div>
         </div>
     );
 };
