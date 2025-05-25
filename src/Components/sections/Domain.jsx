@@ -25,7 +25,7 @@ const Button = ({ children, onClick, className = '' }) => (
 );
 
 const Paragraph = ({ children, className = '' }) => (
-    <p className={`text-gray-600 leading-relaxed ${className}`}>
+    <p className={` leading-relaxed ${className}`}>
         {children}
     </p>
 );
@@ -296,7 +296,7 @@ export const Domain = () => {
     };
 
     return (
-        <div className="min-h-screen transition-colors duration-300">
+        <div id="Domain" className="min-h-screen transition-colors duration-300">
             {/* Header */}
             <section className=" transition-colors duration-300">
     <Container>
