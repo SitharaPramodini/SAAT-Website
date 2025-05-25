@@ -2,11 +2,11 @@ import { Button } from "../../shared/Button";
 import { Container } from "../../shared/Container";
 import { Paragraph } from "../../shared/Paragraph";
 // import { Numbers } from "./Numbers";
-import hero from "/hero.avif";
+import hero from "/hero.png";
 
 export const Hero = () => {
   return (
-    <section className="relative pt-32 lg:pt-36">
+    <section className="relative pt-32 lg:pt-36 h-screen bg-gradient-to-r from-[#1c64f23d] to-[#7c3aed24]">
       <Container className="flex flex-col lg:flex-row gap-10 lg:gap-12">
         <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
           <span
@@ -43,14 +43,14 @@ export const Hero = () => {
         </div>
 
         <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-non lg:mx-0 mx-auto max-w-3xl">
-          <img
-            src={hero}
-            alt="Hero image"
-            width={2350}
-            height={2359}
-            className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-non max-h-96"
-          />
-        </div>
+  <img
+    src={hero}
+    alt="Hero image"
+    width={2350}
+    height={2359}
+    className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-non max-h-96 animate-float"
+  />
+</div>
       </Container>
       {/* <Numbers /> */}
     </section>

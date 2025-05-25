@@ -16,7 +16,7 @@ export const NavBar = () => {
   //   const { toggleTheme, theme } = useThemeStore();
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 py-6">
+    <header className=" inset-x-0 top-0 z-50 py-6 ">
       <div
         className={`mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 `}
       >
