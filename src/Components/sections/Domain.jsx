@@ -672,23 +672,23 @@ export const Domain = () => {
       {technologyCategories.map((category, categoryIndex) => (
         <div key={categoryIndex} className="group relative">
           {/* Category Card */}
-          <div className={`bg-white rounded-2xl shadow-xl border-2 overflow-hidden transform group-hover:-translate-y-2 transition-all duration-300 ${
-            category.color === 'blue' ? 'border-blue-200 hover:border-blue-400 hover:shadow-blue-100' :
-            category.color === 'green' ? 'border-green-200 hover:border-green-400 hover:shadow-green-100' :
-            category.color === 'purple' ? 'border-purple-200 hover:border-purple-400 hover:shadow-purple-100' :
-            category.color === 'orange' ? 'border-orange-200 hover:border-orange-400 hover:shadow-orange-100' :
-            category.color === 'red' ? 'border-red-200 hover:border-red-400 hover:shadow-red-100' :
-            'border-gray-200 hover:border-gray-400 hover:shadow-gray-100'
+          <div className={`bg-white rounded-2xl shadow-xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-300 ${
+            // category.color === 'blue' ? 'border-blue-200 hover:border-blue-400 hover:shadow-blue-100' :
+            // category.color === 'green' ? 'border-green-200 hover:border-green-400 hover:shadow-green-100' :
+            // category.color === 'purple' ? 'border-purple-200 hover:border-purple-400 hover:shadow-blue-100' :
+            // category.color === 'orange' ? 'border-orange-200 hover:border-orange-400 hover:shadow-orange-100' :
+            // category.color === 'red' ? 'border-red-200 hover:border-red-400 hover:shadow-red-100' :
+            'hover:shadow-gray-400'
           }`}>
             
             {/* Category Header */}
             <div className={`${
-              category.color === 'blue' ? 'bg-gradient-to-r from-blue-500 to-blue-600' :
-              category.color === 'green' ? 'bg-gradient-to-r from-green-500 to-green-600' :
-              category.color === 'purple' ? 'bg-gradient-to-r from-purple-500 to-purple-600' :
-              category.color === 'orange' ? 'bg-gradient-to-r from-orange-500 to-orange-600' :
-              category.color === 'red' ? 'bg-gradient-to-r from-red-500 to-red-600' :
-              'bg-gradient-to-r from-gray-500 to-gray-600'
+              category.color === 'blue' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
+              category.color === 'green' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
+              category.color === 'purple' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
+              category.color === 'orange' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
+              category.color === 'red' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
+              'bg-gradient-to-r from-purple-500 to-blue-600'
             } p-6 text-white relative overflow-hidden`}>
               
               {/* Background Pattern */}
