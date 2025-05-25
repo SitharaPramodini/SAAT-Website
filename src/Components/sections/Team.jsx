@@ -5,6 +5,7 @@ import kalinga from "./teamMembers/kalinga.jpg";
 import sithara from "./teamMembers/sithara.jpeg";
 import co from "./teamMembers/co.png";
 import vindya from "./teamMembers/vindya.jpg";
+import ashen from "./teamMembers/ashen.jpeg";
 
 const Team = () => {
     const teamMembers = [
@@ -36,13 +37,13 @@ const Team = () => {
             level: "Undergraduate",
             institution: "Sri Lanka Institute of Information Technology",
             department: "Software Engineering",
-            photo: "/photos/member3.jpg",
+            photo: ashen,
             isLeader: false,
             color: "purple",
             email: "it21373916@my.sliit.lk"
         },
         {
-            name: "Perera N.O.P",
+            name: "Liyanage U.S.P",
             role: "Team Member",
             level: "Undergraduate",
             institution: "Sri Lanka Institute of Information Technology",
@@ -129,7 +130,7 @@ const Team = () => {
         const colors = getColorClasses(member.color);
 
         return (
-            <div className={`group bg-white rounded-2xl shadow-lg border-2 ${colors.border} ${colors.hover} transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl overflow-hidden relative`}>
+            <div id='Team' className={`group bg-white rounded-2xl shadow-lg border-2 ${colors.border} ${colors.hover} transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl overflow-hidden relative`}>
 
                 {/* Leader Crown */}
                 {member.isLeader && (

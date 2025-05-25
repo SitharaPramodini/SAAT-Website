@@ -5,10 +5,10 @@ import logo from "/assets/logos/SAAT_Logo.png";
 const navItems = [
   { href: "#", text: "Home" },
   { href: "#Domain", text: "Domain" },
-  { href: "#services", text: "Milestones" },
-  { href: "#services", text: "Documents" },
-  { href: "#services", text: "Presentations" },
-  { href: "#about-us", text: "About Us" },
+  { href: "#Milestone", text: "Milestones" },
+  { href: "#Documents", text: "Documents" },
+  { href: "#Presentation", text: "Presentations" },
+  { href: "#Team", text: "About Us" },
   { href: "#about-us", text: "Contact Us" }
 ];
 

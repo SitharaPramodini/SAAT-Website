@@ -109,7 +109,7 @@ const Milestone = () => {
     };
 
     return (
-        <div>
+        <div id='Milestone'>
             {/* Header */}
             <div className="text-center pt-12 pb-6">
                 <div className="flex items-center justify-center gap-6">
