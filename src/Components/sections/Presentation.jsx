@@ -9,7 +9,7 @@ const Presentations = () => {
             date: "August 2024",
             status: "Group",
             driveLink: "#",
-            id:"14JHKNLeB4y7O-1DDvA22xcYMofy13tS1"
+            id: "14JHKNLeB4y7O-1DDvA22xcYMofy13tS1"
         },
         {
             title: "Progress Presentation I",
@@ -17,7 +17,7 @@ const Presentations = () => {
             date: "Mar 10, 2024",
             status: "Group",
             driveLink: "#",
-            id:"1Flsh3M2rkOqAD3Ij4XXdERdGBmOaP7Sv"
+            id: "1Flsh3M2rkOqAD3Ij4XXdERdGBmOaP7Sv"
         },
         {
             title: "Progress Presentation II",
@@ -25,7 +25,7 @@ const Presentations = () => {
             date: "Apr 22, 2024",
             status: "Group",
             driveLink: "#",
-            id:"1TcnOqY3dQyTAFNrZ6lum2Cizi-dftkls"
+            id: "1TcnOqY3dQyTAFNrZ6lum2Cizi-dftkls"
         },
         {
             title: "Final Presentation",
@@ -114,9 +114,17 @@ const Presentations = () => {
 
                                     {/* Download Button */}
                                     <a
-                                        href={`https://drive.google.com/uc?export=download&id=${doc.id}`}
-                                        download
-                                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 px-4 rounded-xl font-medium transition-all duration-200 flex items-center justify-center gap-2 group-hover:bg-blue-100 group-hover:text-blue-700"
+                                        href={doc.id ? `https://drive.google.com/uc?export=download&id=${doc.id}` : "#"}
+                                        download={doc.id ? true : false}
+                                        onClick={(e) => {
+                                            if (!doc.id) {
+                                                e.preventDefault();
+                                            }
+                                        }}
+                                        className={`w-full py-3 px-4 rounded-xl font-medium transition-all duration-200 flex items-center justify-center gap-2 ${doc.id
+                                                ? "bg-gray-100 hover:bg-gray-200 text-gray-700 group-hover:bg-blue-100 group-hover:text-blue-700 cursor-pointer"
+                                                : "bg-gray-300 text-gray-500 cursor-not-allowed opacity-50"
+                                            }`}
                                     >
                                         <Download size={18} />
                                         Download
