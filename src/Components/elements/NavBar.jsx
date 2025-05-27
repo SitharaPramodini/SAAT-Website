@@ -60,13 +60,13 @@ export const NavBar = () => {
                             px-6 lg:px-0"
             >
               <a
-  href="https://www.saat.42web.io"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="px-6 py-3 text-white font-bold rounded-full outline-none relative overflow-hidden border dark:bg-blue-600 cursor-pointer"
->
-  Explore SAAT
-</a>
+                href="https://www.saat.42web.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 text-white font-bold rounded-full outline-none relative overflow-hidden border dark:bg-blue-600 cursor-pointer"
+              >
+                Explore SAAT
+              </a>
 
             </div>
           </div>

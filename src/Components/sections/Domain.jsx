@@ -151,25 +151,29 @@ export const Domain = () => {
             title: "Code Analysis Module",
             icon: Code,
             features: ["GitHub API integration", "Line-by-line feedback", "AI-powered static analysis", "Naming convention checks"],
-            tech: ["Flask", "GitHub API", "Gemini AI", "Firebase"]
+            tech: ["Flask", "GitHub API", "Gemini AI", "Firebase"],
+            member: "IT21252990 Jayathilaka A.G.K.D"
         },
         {
             title: "Report Analysis Module",
             icon: FileText,
             features: ["PDF/DOC processing", "Rubric-based evaluation", "Plagiarism detection", "AI content detection"],
-            tech: ["NLTK", "Longformer", "RoBERTa", "GPT-3.5"]
+            tech: ["NLTK", "Longformer", "RoBERTa", "GPT-3.5"],
+            member: "IT21306754 Liyanage U.S.P"
         },
         {
             title: "Video Analysis Module",
             icon: Video,
             features: ["Speech-to-text transcription", "Visual content analysis", "Timestamped feedback", "Semantic segmentation"],
-            tech: ["Whisper", "Florence2", "ResNet-18", "FFmpeg"]
+            tech: ["Whisper", "Florence2", "ResNet-18", "FFmpeg"],
+            member: "IT21373916 Gunasekara W.M.A.S"
         },
         {
             title: "Viva Question Generator",
             icon: Brain,
             features: ["Context-aware questions", "Multi-level difficulty", "Content-specific generation", "Teacher customization"],
-            tech: ["Gemini 1.5 Flash", "LangChain", "Firebase", "React"]
+            tech: ["Gemini 1.5 Flash", "LangChain", "Firebase", "React"],
+            member: "IT21271182 Rathnayake R.M.U.V"
         }
     ];
 
@@ -295,22 +299,203 @@ export const Domain = () => {
         return colorMap[color]?.[variant] || colorMap.gray[variant];
     };
 
+
+
+
+    // references
+    const [isExpanded, setIsExpanded] = useState(false);
+    const references = [
+        {
+            id: 1,
+            authors: "D. R. Sadler",
+            title: "Grade integrity and the representation of academic achievement",
+            journal: "Studies in Higher Education",
+            volume: "vol. 34, no. 7",
+            pages: "pp. 807–826",
+            date: "Nov. 2009",
+            doi: "https://doi.org/10.1080/03075070802706553"
+        },
+        {
+            id: 2,
+            authors: "OpenAI",
+            title: "Introducing ChatGPT",
+            journal: "Openai",
+            date: "Nov. 30, 2022",
+            url: "https://openai.com/index/chatgpt/",
+            accessed: "(accessed May 09, 2025)"
+        },
+        {
+            id: 3,
+            authors: "Google",
+            title: "Introducing Gemini: our largest and most capable AI model",
+            journal: "Google",
+            date: "Dec. 06, 2023",
+            url: "https://blog.google/technology/ai/googlegemini-ai/",
+            accessed: "(accessed May 09, 2025)"
+        },
+        {
+            id: 4,
+            authors: "Gradescope",
+            title: "Gradescope | Save time grading",
+            journal: "@gradescope",
+            date: "2000",
+            url: "https://www.gradescope.com/",
+            accessed: "(accessed May 09, 2025)"
+        },
+        {
+            id: 5,
+            authors: "Z. Ke and V. Ng",
+            title: "Automated Essay Scoring: A Survey of the State of the Art",
+            journal: "Proceedings of the Twenty-Eighth International Joint Conference on Artificial Intelligence",
+            date: "Aug. 2019",
+            doi: "https://doi.org/10.24963/ijcai.2019/879"
+        },
+        {
+            id: 6,
+            authors: "W. Gan, Z. Qi, J. Wu, and Jerry Chun-Wei Lin",
+            title: "Large Language Models in Education: Vision and Opportunities",
+            journal: "2023 IEEE International Conference on Big Data (BigData)",
+            location: "Sorrento, Italy",
+            date: "2023",
+            pages: "pp. 4776–4785",
+            doi: "https://doi.org/10.1109/bigdata59044.2023.10386291"
+        },
+        {
+            id: 7,
+            authors: "M. Lundgren",
+            title: "Large Language Models in Student Assessment: Comparing ChatGPT and Human Graders",
+            date: "Jun. 2024",
+            doi: "https://doi.org/10.48550/arxiv.2406.16510"
+        },
+        {
+            id: 8,
+            authors: "Y. Zhang et al.",
+            title: "Can LLMs Design Good Questions Based on Context?",
+            date: "Jan. 2025",
+            doi: "https://doi.org/10.48550/arxiv.2501.03491"
+        },
+        {
+            id: 9,
+            authors: "Z. Rasheed et al.",
+            title: "AI-powered Code Review with LLMs: Early Results",
+            date: "Apr. 2024",
+            doi: "https://doi.org/10.48550/arXiv.2404.18496"
+        },
+        {
+            id: 10,
+            authors: "Á. M. Guerrero-Higueras, C. Fernández Llamas, L. Sánchez González, A. Gutierrez Fernández, G. Esteban Costales, and M. Á. Conde González",
+            title: "Academic Success Assessment through Version Control Systems",
+            journal: "Applied Sciences",
+            volume: "vol. 10, no. 4",
+            pages: "p. 1492",
+            date: "Jan. 2020",
+            doi: "https://doi.org/10.3390/app10041492"
+        },
+        {
+            id: 11,
+            authors: "M. Liang",
+            title: "Leveraging natural language processing for automated assessment and feedback production in virtual education settings",
+            journal: "Journal of Computational Methods in Sciences and Engineering",
+            date: "Jan. 2025",
+            doi: "https://doi.org/10.1177/14727978251314556"
+        },
+        {
+            id: 12,
+            authors: "M. Perkins, J. Roe, D. Postma, J. McGaughran, and D. Hickerson",
+            title: "Game of Tones: Faculty detection of GPT-4 generated content in university assessments",
+            date: "May 2023",
+            doi: "https://doi.org/10.48550/arxiv.2305.18081"
+        },
+        {
+            id: 13,
+            authors: "X. Zhu, Z. Gu, S. Jiang, Z. Li, H. Feng, and Y. Xiao",
+            title: "VCEval: Rethinking What is a Good Educational Video and How to Automatically Evaluate It",
+            date: "Jun. 2024",
+            doi: "https://doi.org/10.48550/arxiv.2407.12005"
+        },
+        {
+            id: 14,
+            authors: "OpenAI",
+            title: "Whisper",
+            journal: "Openai",
+            date: "2022",
+            url: "https://openai.com/index/whisper/",
+            accessed: "(accessed May 09, 2025)"
+        },
+        {
+            id: 15,
+            authors: "B. Xiao et al.",
+            title: "Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks",
+            journal: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+            date: "2024",
+            pages: "pp. 4818–4829"
+        },
+        {
+            id: 16,
+            authors: "Y. Liu et al.",
+            title: "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+            date: "Jul. 2019",
+            doi: "https://doi.org/10.48550/arxiv.1907.11692"
+        },
+        {
+            id: 17,
+            authors: "I. Beltagy, M. E. Peters, and A. Cohan",
+            title: "Longformer: The Long-Document Transformer",
+            date: "Dec. 02, 2020",
+            url: "https://arxiv.org/abs/2004.05150v2"
+        },
+        {
+            id: 18,
+            authors: "L. Dong-Kyu",
+            title: "A GPT-based Code Review System for Programming Language Learning",
+            date: "Jun. 2024",
+            doi: "https://doi.org/10.48550/arxiv.2407.04722"
+        }
+    ];
+
+    const formatReference = (ref) => {
+        let citation = `${ref.authors}, "${ref.title}"`;
+
+        if (ref.journal) {
+            citation += `, ${ref.journal}`;
+        }
+
+        if (ref.volume) {
+            citation += `, ${ref.volume}`;
+        }
+
+        if (ref.pages) {
+            citation += `, ${ref.pages}`;
+        }
+
+        if (ref.location) {
+            citation += `, ${ref.location}`;
+        }
+
+        citation += `, ${ref.date}`;
+
+        return citation;
+    };
+
+    const displayedReferences = isExpanded ? references : references.slice(0, 3);
+    const remainingCount = references.length - 3;
+
     return (
         <div id="Domain" className="min-h-screen transition-colors duration-300">
             {/* Header */}
             <section className=" transition-colors duration-300">
-    <Container>
-        <div className="text-center pt-12 pb-6">
-            <div className="flex items-center justify-center gap-6">
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-blue-300 to-purple-400"></div>
-                <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-purple-600 drop-shadow-sm whitespace-nowrap">
-                    Project Scope
-                </h1>
-                <div className="flex-1 h-px bg-gradient-to-r from-purple-400 via-blue-300 to-transparent"></div>
-            </div>
-        </div>
-    </Container>
-</section>
+                <Container>
+                    <div className="text-center pt-12 pb-6">
+                        <div className="flex items-center justify-center gap-6">
+                            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-blue-300 to-purple-400"></div>
+                            <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-purple-600 drop-shadow-sm whitespace-nowrap">
+                                Project Scope
+                            </h1>
+                            <div className="flex-1 h-px bg-gradient-to-r from-purple-400 via-blue-300 to-transparent"></div>
+                        </div>
+                    </div>
+                </Container>
+            </section>
 
             <Container className="py-8">
                 {/* Navigation */}
@@ -322,8 +507,8 @@ export const Domain = () => {
                                 key={section.id}
                                 onClick={() => setActiveSection(section.id)}
                                 className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 !w-auto !h-auto ${activeSection === section.id
-                                        ? '!bg-blue-600 !text-white shadow-md'
-                                        : '!bg-gray-100 !text-gray-700 hover:!bg-gray-200'
+                                    ? '!bg-blue-600 !text-white shadow-md'
+                                    : '!bg-gray-100 !text-gray-700 hover:!bg-gray-200'
                                     }`}
                             >
                                 <Icon size={18} />
@@ -358,10 +543,10 @@ export const Domain = () => {
                                             {/* Status Badge */}
                                             <div className="absolute top-4 right-4 z-10">
                                                 <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide ${platform.status === 'widely-used' ? 'bg-green-100 text-green-800  ' :
-                                                        platform.status === 'popular' ? 'bg-blue-100 text-blue-800 ' :
-                                                            platform.status === 'growing' ? 'bg-purple-100 text-purple-800 ' :
-                                                                platform.status === 'declining' ? 'bg-red-100 text-red-800 ' :
-                                                                    'bg-orange-100 text-orange-800 '
+                                                    platform.status === 'popular' ? 'bg-blue-100 text-blue-800 ' :
+                                                        platform.status === 'growing' ? 'bg-purple-100 text-purple-800 ' :
+                                                            platform.status === 'declining' ? 'bg-red-100 text-red-800 ' :
+                                                                'bg-orange-100 text-orange-800 '
                                                     }`}>
                                                     {platform.status}
                                                 </span>
@@ -372,13 +557,13 @@ export const Domain = () => {
                                                 <div className="flex items-center gap-4 mb-4">
                                                     {/* Logo Placeholder */}
                                                     {/* <div className="w-14 h-14 bg-white rounded-xl border-2 border-gray-200 flex items-center justify-center shadow-sm"> */}
-                                                        {platform.logo ? (
-                                                            <img src={platform.logo} alt={platform.name} className="w-14 h-14 rounded-xl object-cover" />
-                                                        ) : (
-                                                            <span className="text-2xl font-bold text-gray-400">
-                                                                {platform.name.charAt(0)}
-                                                            </span>
-                                                        )}
+                                                    {platform.logo ? (
+                                                        <img src={platform.logo} alt={platform.name} className="w-14 h-14 rounded-xl object-cover" />
+                                                    ) : (
+                                                        <span className="text-2xl font-bold text-gray-400">
+                                                            {platform.name.charAt(0)}
+                                                        </span>
+                                                    )}
                                                     {/* </div> */}
                                                     <div className="flex-1">
                                                         <h3 className="text-xl font-bold text-gray-900  mb-1">{platform.name}</h3>
@@ -583,7 +768,10 @@ export const Domain = () => {
                                         <div className="p-6 bg-gray-50">
                                             <div className="flex items-center gap-3">
                                                 <Icon className="text-blue-600 transition-colors duration-300" size={24} />
-                                                <h3 className="text-lg font-semibold text-gray-900 transition-colors duration-300">{module.title}</h3>
+                                                <div className='flex flex-col'>
+                                                    <h3 className="text-lg font-semibold text-gray-900 transition-colors duration-300">{module.title}</h3>
+                                                    <p>{module.member}</p>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -655,164 +843,255 @@ export const Domain = () => {
 
                 {/* Technologies Section */}
                 {/* Technologies Section */}
-{activeSection === 'technologies' && (
-  <div className="space-y-8">
-    {/* Exciting Header */}
-    <div className="space-y-6">
-                        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 transition-colors duration-300">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3 transition-colors duration-300">
-                                <Zap className="text-blue-600" />
-                                Technologies Used
+                {activeSection === 'technologies' && (
+                    <div className="space-y-8">
+                        {/* Exciting Header */}
+                        <div className="space-y-6">
+                            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 transition-colors duration-300">
+                                <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3 transition-colors duration-300">
+                                    <Zap className="text-blue-600" />
+                                    Technologies Used
+                                </h2>
+                            </div>
+                        </div>
+
+                        {/* Tech Categories with Modern Cards */}
+                        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+                            {technologyCategories.map((category, categoryIndex) => (
+                                <div key={categoryIndex} className="group relative">
+                                    {/* Category Card */}
+                                    <div className={`bg-white rounded-2xl shadow-xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-300 ${
+                                        // category.color === 'blue' ? 'border-blue-200 hover:border-blue-400 hover:shadow-blue-100' :
+                                        // category.color === 'green' ? 'border-green-200 hover:border-green-400 hover:shadow-green-100' :
+                                        // category.color === 'purple' ? 'border-purple-200 hover:border-purple-400 hover:shadow-blue-100' :
+                                        // category.color === 'orange' ? 'border-orange-200 hover:border-orange-400 hover:shadow-orange-100' :
+                                        // category.color === 'red' ? 'border-red-200 hover:border-red-400 hover:shadow-red-100' :
+                                        'hover:shadow-gray-400'
+                                        }`}>
+
+                                        {/* Category Header */}
+                                        <div className={`${category.color === 'blue' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
+                                                category.color === 'green' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
+                                                    category.color === 'purple' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
+                                                        category.color === 'orange' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
+                                                            category.color === 'red' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
+                                                                'bg-gradient-to-r from-purple-500 to-blue-600'
+                                            } p-6 text-white relative overflow-hidden`}>
+
+                                            {/* Background Pattern */}
+                                            <div className="absolute inset-0 opacity-10">
+                                                <div className="absolute -top-4 -right-4 w-24 h-24 border-4 border-white rounded-full"></div>
+                                                <div className="absolute -bottom-4 -left-4 w-16 h-16 border-4 border-white rounded-full"></div>
+                                            </div>
+
+                                            <div className="relative z-10">
+                                                <div className="flex items-center gap-3 mb-2">
+                                                    <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                                        <span className="text-white font-bold">
+                                                            {category.color === 'blue' ? '🎨' :
+                                                                category.color === 'green' ? '⚡' :
+                                                                    category.color === 'purple' ? '🤖' :
+                                                                        category.color === 'orange' ? '🔍' :
+                                                                            category.color === 'red' ? '💾' : '🛠️'}
+                                                        </span>
+                                                    </div>
+                                                    <h3 className="text-xl font-bold">{category.title}</h3>
+                                                </div>
+                                                <div className="text-white/80 text-sm">
+                                                    {category.technologies.length} powerful tools
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Technologies List */}
+                                        <div className="p-6 space-y-3">
+                                            {category.technologies.map((tech, idx) => (
+                                                <div key={idx} className="group/tech bg-gray-50 hover:bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-4 transition-all duration-200 hover:shadow-md cursor-pointer">
+                                                    <div className="flex items-start justify-between">
+                                                        <div className="flex-1">
+                                                            <div className="flex items-center gap-2 mb-1">
+                                                                <div className={`w-2 h-2 rounded-full ${category.color === 'blue' ? 'bg-blue-500' :
+                                                                        category.color === 'green' ? 'bg-green-500' :
+                                                                            category.color === 'purple' ? 'bg-purple-500' :
+                                                                                category.color === 'orange' ? 'bg-orange-500' :
+                                                                                    category.color === 'red' ? 'bg-red-500' : 'bg-gray-500'
+                                                                    }`}></div>
+                                                                <h4 className="font-bold text-gray-900 group-hover/tech:text-blue-600 transition-colors">
+                                                                    {tech.name}
+                                                                </h4>
+                                                            </div>
+                                                            <p className="text-sm text-gray-600 leading-relaxed">{tech.desc}</p>
+                                                        </div>
+                                                        <div className="ml-2 opacity-0 group-hover/tech:opacity-100 transition-opacity">
+                                                            <ChevronRight size={16} className="text-gray-400" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        {/* Category Footer Stats */}
+                                        <div className={`${getColorClasses(category.color, 'bg')} px-6 py-3 border-t border-gray-100`}>
+                                            <div className="flex items-center justify-between text-sm">
+                                                <span className={`font-medium ${getColorClasses(category.color, 'text')}`}>
+                                                    Stack Category
+                                                </span>
+                                                <div className="flex items-center gap-1">
+                                                    <div className={`w-1 h-1 rounded-full ${category.color === 'blue' ? 'bg-blue-400' :
+                                                            category.color === 'green' ? 'bg-green-400' :
+                                                                category.color === 'purple' ? 'bg-purple-400' :
+                                                                    category.color === 'orange' ? 'bg-orange-400' :
+                                                                        category.color === 'red' ? 'bg-red-400' : 'bg-gray-400'
+                                                        }`}></div>
+                                                    <span className={`text-xs ${getColorClasses(category.color, 'text')} opacity-70`}>
+                                                        Production Ready
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Floating Badge */}
+                                    <div className="absolute -top-3 -right-3 z-20">
+                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-lg ${category.color === 'blue' ? 'bg-blue-500' :
+                                                category.color === 'green' ? 'bg-green-500' :
+                                                    category.color === 'purple' ? 'bg-purple-500' :
+                                                        category.color === 'orange' ? 'bg-orange-500' :
+                                                            category.color === 'red' ? 'bg-red-500' : 'bg-gray-500'
+                                            }`}>
+                                            {category.technologies.length}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Tech Stack Summary */}
+                        <div className="bg-gradient-to-r from-[#97bfff] to-[#d7d3ff] rounded-2xl p-8 border border-gray-200">
+                            <div className="text-center">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Why This Tech Stack?</h3>
+                                <div className="grid md:grid-cols-3 gap-6 mt-6">
+                                    <div className="text-center">
+                                        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                            <span className="text-2xl">🚀</span>
+                                        </div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Performance</h4>
+                                        <p className="text-sm text-gray-600">Lightning-fast processing and real-time analysis</p>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                            <span className="text-2xl">🔧</span>
+                                        </div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Scalability</h4>
+                                        <p className="text-sm text-gray-600">Built to handle thousands of submissions</p>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                            <span className="text-2xl">🎯</span>
+                                        </div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Intelligence</h4>
+                                        <p className="text-sm text-gray-600">AI-powered insights and automation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {activeSection === 'literature' && (
+                    <div className="max-w-4xl mx-auto p-6 bg-white">
+                        <div className="bg-gray-50 rounded-lg p-6 shadow-sm border">
+                            <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                                References ({references.length})
                             </h2>
+
+                            <div className="space-y-4">
+                                {displayedReferences.map((ref) => (
+                                    <div key={ref.id} className="pb-4 border-b border-gray-200 last:border-b-0">
+                                        <div className="flex gap-3">
+                                            <span className="text-sm font-semibold text-blue-600 min-w-[2rem]">
+                                                [{ref.id}]
+                                            </span>
+
+                                            <div className="flex-1">
+                                                <p className="text-sm text-gray-800 leading-relaxed mb-2">
+                                                    {formatReference(ref)}
+                                                </p>
+
+                                                <div className="flex flex-wrap gap-2">
+                                                    {ref.doi && (
+                                                        <a
+                                                            href={ref.doi}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="inline-flex items-center px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors"
+                                                        >
+                                                            DOI
+                                                        </a>
+                                                    )}
+
+                                                    {ref.url && (
+                                                        <a
+                                                            href={ref.url}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="inline-flex items-center px-2 py-1 text-xs bg-green-100 text-green-700 rounded hover:bg-green-200 transition-colors"
+                                                        >
+                                                            URL
+                                                        </a>
+                                                    )}
+
+                                                    {ref.accessed && (
+                                                        <span className="text-xs text-gray-500 px-2 py-1">
+                                                            {ref.accessed}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {references.length > 3 && (
+                                <div className="flex justify-center mt-6 pt-4 border-t border-gray-200">
+                                    <button
+                                        onClick={() => setIsExpanded(!isExpanded)}
+                                        className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                                    >
+                                        {isExpanded ? (
+                                            <>
+                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                                                </svg>
+                                                Show Less
+                                            </>
+                                        ) : (
+                                            <>
+                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                </svg>
+                                                Show {remainingCount} More References
+                                            </>
+                                        )}
+                                    </button>
+                                </div>
+                            )}
+
+                            <div className="mt-6 pt-4 border-t border-gray-200">
+                                <p className="text-sm text-gray-600">
+                                    <span className="font-semibold">Note:</span> Academic sources covering AI, education, assessment, and natural language processing.
+                                    {!isExpanded && references.length > 3 && (
+                                        <span className="block mt-1">Showing {displayedReferences.length} of {references.length} references.</span>
+                                    )}
+                                </p>
+                            </div>
                         </div>
-                        </div>
-
-    {/* Tech Categories with Modern Cards */}
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-      {technologyCategories.map((category, categoryIndex) => (
-        <div key={categoryIndex} className="group relative">
-          {/* Category Card */}
-          <div className={`bg-white rounded-2xl shadow-xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-300 ${
-            // category.color === 'blue' ? 'border-blue-200 hover:border-blue-400 hover:shadow-blue-100' :
-            // category.color === 'green' ? 'border-green-200 hover:border-green-400 hover:shadow-green-100' :
-            // category.color === 'purple' ? 'border-purple-200 hover:border-purple-400 hover:shadow-blue-100' :
-            // category.color === 'orange' ? 'border-orange-200 hover:border-orange-400 hover:shadow-orange-100' :
-            // category.color === 'red' ? 'border-red-200 hover:border-red-400 hover:shadow-red-100' :
-            'hover:shadow-gray-400'
-          }`}>
-            
-            {/* Category Header */}
-            <div className={`${
-              category.color === 'blue' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
-              category.color === 'green' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
-              category.color === 'purple' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
-              category.color === 'orange' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
-              category.color === 'red' ? 'bg-gradient-to-r from-purple-500 to-blue-600' :
-              'bg-gradient-to-r from-purple-500 to-blue-600'
-            } p-6 text-white relative overflow-hidden`}>
-              
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute -top-4 -right-4 w-24 h-24 border-4 border-white rounded-full"></div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 border-4 border-white rounded-full"></div>
-              </div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">
-                      {category.color === 'blue' ? '🎨' :
-                       category.color === 'green' ? '⚡' :
-                       category.color === 'purple' ? '🤖' :
-                       category.color === 'orange' ? '🔍' :
-                       category.color === 'red' ? '💾' : '🛠️'}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold">{category.title}</h3>
-                </div>
-                <div className="text-white/80 text-sm">
-                  {category.technologies.length} powerful tools
-                </div>
-              </div>
-            </div>
-
-            {/* Technologies List */}
-            <div className="p-6 space-y-3">
-              {category.technologies.map((tech, idx) => (
-                <div key={idx} className="group/tech bg-gray-50 hover:bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-4 transition-all duration-200 hover:shadow-md cursor-pointer">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <div className={`w-2 h-2 rounded-full ${
-                          category.color === 'blue' ? 'bg-blue-500' :
-                          category.color === 'green' ? 'bg-green-500' :
-                          category.color === 'purple' ? 'bg-purple-500' :
-                          category.color === 'orange' ? 'bg-orange-500' :
-                          category.color === 'red' ? 'bg-red-500' : 'bg-gray-500'
-                        }`}></div>
-                        <h4 className="font-bold text-gray-900 group-hover/tech:text-blue-600 transition-colors">
-                          {tech.name}
-                        </h4>
-                      </div>
-                      <p className="text-sm text-gray-600 leading-relaxed">{tech.desc}</p>
                     </div>
-                    <div className="ml-2 opacity-0 group-hover/tech:opacity-100 transition-opacity">
-                      <ChevronRight size={16} className="text-gray-400" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Category Footer Stats */}
-            <div className={`${getColorClasses(category.color, 'bg')} px-6 py-3 border-t border-gray-100`}>
-              <div className="flex items-center justify-between text-sm">
-                <span className={`font-medium ${getColorClasses(category.color, 'text')}`}>
-                  Stack Category
-                </span>
-                <div className="flex items-center gap-1">
-                  <div className={`w-1 h-1 rounded-full ${
-                    category.color === 'blue' ? 'bg-blue-400' :
-                    category.color === 'green' ? 'bg-green-400' :
-                    category.color === 'purple' ? 'bg-purple-400' :
-                    category.color === 'orange' ? 'bg-orange-400' :
-                    category.color === 'red' ? 'bg-red-400' : 'bg-gray-400'
-                  }`}></div>
-                  <span className={`text-xs ${getColorClasses(category.color, 'text')} opacity-70`}>
-                    Production Ready
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Floating Badge */}
-          <div className="absolute -top-3 -right-3 z-20">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-lg ${
-              category.color === 'blue' ? 'bg-blue-500' :
-              category.color === 'green' ? 'bg-green-500' :
-              category.color === 'purple' ? 'bg-purple-500' :
-              category.color === 'orange' ? 'bg-orange-500' :
-              category.color === 'red' ? 'bg-red-500' : 'bg-gray-500'
-            }`}>
-              {category.technologies.length}
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    {/* Tech Stack Summary */}
-    <div className="bg-gradient-to-r from-[#97bfff] to-[#d7d3ff] rounded-2xl p-8 border border-gray-200">
-      <div className="text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Why This Tech Stack?</h3>
-        <div className="grid md:grid-cols-3 gap-6 mt-6">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">🚀</span>
-            </div>
-            <h4 className="font-semibold text-gray-900 mb-2">Performance</h4>
-            <p className="text-sm text-gray-600">Lightning-fast processing and real-time analysis</p>
-          </div>
-          <div className="text-center">
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">🔧</span>
-            </div>
-            <h4 className="font-semibold text-gray-900 mb-2">Scalability</h4>
-            <p className="text-sm text-gray-600">Built to handle thousands of submissions</p>
-          </div>
-          <div className="text-center">
-            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">🎯</span>
-            </div>
-            <h4 className="font-semibold text-gray-900 mb-2">Intelligence</h4>
-            <p className="text-sm text-gray-600">AI-powered insights and automation</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-)}
+                )}
             </Container>
         </div>
     );
