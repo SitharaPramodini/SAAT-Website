@@ -45,7 +45,7 @@ const Footer = () => {
                         
                         {/* Social Links */}
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors duration-200 group">
+                            <a href="https://github.com/IT21252990/SAAT" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors duration-200 group">
                                 <Github size={20} className="group-hover:text-blue-400 transition-colors" />
                             </a>
                             <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors duration-200 group">
@@ -98,19 +98,19 @@ const Footer = () => {
                                 <div className="space-y-3">
                                     <div className="flex items-center gap-2">
                                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                                        <span className="text-sm text-gray-300">Project Started: March 2024</span>
+                                        <span className="text-sm text-gray-300">Project Started: April 2024</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                                        <span className="text-sm text-gray-300">Development Phase: Jun - Oct 2024</span>
+                                        <span className="text-sm text-gray-300">Development Phase: April 2024 - May 2025</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                                        <span className="text-sm text-gray-300">Final Submission: November 2024</span>
+                                        <span className="text-sm text-gray-300">Final Submission: May 2025</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                                        <span className="text-sm text-gray-300">Presentation: December 2024</span>
+                                        <span className="text-sm text-gray-300">Presentation: May 2025</span>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ const Footer = () => {
                                 <Award className="text-yellow-400" size={16} />
                                 <span className="text-sm font-medium text-white">Academic Year</span>
                             </div>
-                            <p className="text-xs text-gray-300">2023/2024 - Final Year Project</p>
+                            <p className="text-xs text-gray-300">2024/2025 - Final Year Project</p>
                         </div>
                     </div>
                 </div>
