@@ -6,6 +6,7 @@ import sithara from "./teamMembers/sithara.jpeg";
 import co from "./teamMembers/co.png";
 import vindya from "./teamMembers/vindya.jpg";
 import ashen from "./teamMembers/ashen.jpeg";
+import thusithanjana from "./teamMembers/thusithanjana.jpeg";
 
 const Team = () => {
     const teamMembers = [
@@ -75,6 +76,16 @@ const Team = () => {
             photo: co,
             email: "kaushalya.r@sliit.lk",
             color: "teal"
+        },
+        {
+            name: "Mr. Thusithanjana Thilakaratne",
+            role: "Past Supervisor",
+            level: "Lecturer",
+            institution: "Sri Lanka Institute of Information Technology",
+            department: "Software Engineering",
+            photo: thusithanjana,
+            email: "thusithanjana.t@sliit.lk",
+            color: "green"
         }
     ];
 
@@ -238,7 +249,7 @@ const Team = () => {
                         <p className="text-lg text-gray-600">Academic guidance and mentorship</p>
                     </div>
 
-                    <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div className="grid lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
                         {supervisors.map((supervisor, index) => (
                             <MemberCard key={index} member={supervisor} isTeamMember={false} />
                         ))}

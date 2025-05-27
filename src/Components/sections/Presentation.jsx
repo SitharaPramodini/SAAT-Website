@@ -32,7 +32,8 @@ const Presentations = () => {
             color: "orange",
             date: "Jun 18, 2024",
             status: "Group",
-            driveLink: "#"
+            driveLink: "#",
+            id:"1XhNSnxvUe0C7ZwV4zxYHZh6zg7yefiw1"
         },
     ];
 
